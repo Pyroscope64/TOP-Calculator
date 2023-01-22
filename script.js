@@ -35,7 +35,7 @@ function Calculate() {
             num1 = num1 / num2;
             break;
         case "x":
-            num1 = num1 * 2;
+            num1 = num1 * num2;
             break;
         default:
             console.log("no operator");
@@ -82,12 +82,22 @@ numberButtons.forEach((button) =>
     button.addEventListener("click", () => AddNum(button.textContent))
 );
 function AddNum(number) {
-    if (currentNum === "num1") {
-        num1 = `${num1}${number}`;
+    if (number === ".") {
+        if (currentNum === "num1" && !(num1.includes("."))) {
+            num1 = `${num1}${number}`;
+        }
+        else if (currentNum === "num2" && !(num2.includes("."))) {
+            num2 = `${num2}${number}`
+        }
     }
-    else if (currentNum === "num2") {
-        num2 = `${num2}${number}`;
-    };
+    else {
+        if (currentNum === "num1") {
+            num1 = `${num1}${number}`;
+        }
+        else if (currentNum === "num2") {
+            num2 = `${num2}${number}`;
+        };
+    }
     Display();
 }
 
