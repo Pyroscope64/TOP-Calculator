@@ -69,6 +69,7 @@ button:hover {
         height:369px;
     }
     #display {
+        font-size:1em;
         min-height:2em;
     }
     button {
