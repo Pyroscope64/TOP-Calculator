@@ -15,7 +15,8 @@ body {
     border:2px solid darkblue;
     border-radius: 5px;
     padding:8px;
-    width:356px;
+    width:80vw;
+    height:80vh;
 }
 #display {
     padding:3px;
@@ -25,7 +26,7 @@ body {
     border-radius: 5px;
     margin-bottom:5px;
     font-family: 'Courier New', Courier, monospace;
-    min-height:2em;
+    min-height:20vh;
     overflow-wrap: break-word;
 }
 #display > h1 {
@@ -35,9 +36,9 @@ button {
     margin:3px;
     border:none;
     border-radius: 5px;
-    width:80px;
-    height:60px;
-    font-size: 2em;
+    width:19.05vw;
+    height:11.6vh;
+    font-size: 5em;
     transition: .2s;
 }
 button:hover {
@@ -51,7 +52,7 @@ button:hover {
 }
 #equals {
     background-color: darkslategrey;
-    width:168px;
+    width:39vw;
 }
 #clear {
     background-color: red;
@@ -59,4 +60,22 @@ button:hover {
 .number {
     background-color: white;
     color:darkblue;
+}
+
+@media screen and (min-width:1024px) {
+    #container {
+        width:356px;
+        height:369px;
+    }
+    #display {
+        min-height:2em;
+    }
+    button {
+        width:80px;
+        height:60px;
+        font-size: 2em;
+    }
+    #equals {
+        width:168px;
+    }
 }
