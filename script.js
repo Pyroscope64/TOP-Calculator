@@ -47,8 +47,9 @@ function Calculate() {
 
 clear.addEventListener("click", function Clear() {
     display.textContent = "";
-    num1 = 0;
-    num2 = 0;
+    num1 = "";
+    num2 = "";
+    operator = "";
     currentNum = "num1";
 });
 
